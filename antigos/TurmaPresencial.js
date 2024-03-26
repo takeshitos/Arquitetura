@@ -8,7 +8,7 @@ class TurmaPresencial extends Turma{
     }
 
     aprovado(){
-        return this._frequencia >= 7;
+        return super.aprovado() && this.frequencia >= 70;
     }
 }
 module.exports = {TurmaPresencial}

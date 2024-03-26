@@ -1,4 +1,4 @@
-class Turma{
+class Turma {
     
     constructor({codigo, nota}){
         this._codigo = codigo;
@@ -6,7 +6,7 @@ class Turma{
     }
 
     aprovado(){
-        return this._nota >= 6;
+        return this._nota >= 60;
     }
     
 }
