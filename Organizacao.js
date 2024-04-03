@@ -4,11 +4,11 @@ class Organizacao {
         this.departamentos = [];
     }
 
-    addDepartmento(departamento) {
+    addDepartamento(departamento) {
         this.departamentos.push(departamento);
     }
 
-    removeDepartmento(departamento) {
+    removeDepartamento(departamento) {
         const index = this.departamentos.indexOf(departamento);
         if (index !== -1) {
             this.departamentos.splice(index, 1);
@@ -26,10 +26,10 @@ class Organizacao {
     calcularSalDepartamento(departamento) {
         let deparSalario = 0;
         departamento.funcionarios.forEach(funcionario => {
-            deparSalario += funcionario.getSalary();
+            deparSalario += funcionario.getSalario();
         });
-        departamento.departmentos.forEach(subDepartmento => {
-            deparSalario += this.calcularSalDepartamento(subDepartmento);
+        departamento.departamentos.forEach(subDepartamento => {
+            deparSalario += this.calcularSalDepartamento(subDepartamento);
         });
         return deparSalario;
     }

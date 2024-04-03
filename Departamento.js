@@ -1,8 +1,8 @@
-class Departmento {
+class Departamento {
     constructor(nome) {
         this.nome = nome;
         this.funcionarios = [];
-        this.departmentos = [];
+        this.departamentos = [];
     }
 
     addFuncionario(funcionario) {
@@ -16,16 +16,16 @@ class Departmento {
         }
     }
 
-    addDepartmento(departmento) {
-        this.departmentos.push(departmento);
+    addDepartamento(departamento) {
+        this.departamentos.push(departamento);
     }
 
-    removeDepartmento(department) {
-        const index = this.departmentos.indexOf(department);
+    removeDepartamento(departamento) {
+        const index = this.departamentos.indexOf(departamento);
         if (index !== -1) {
-            this.departmentos.splice(index, 1);
+            this.departamentos.splice(index, 1);
         }
     }
 }
 
-module.exports = Departmento;
+module.exports = Departamento;
